@@ -32,4 +32,41 @@ public class Hospital {
         for (Appointment a : appointments)
             a.displayAppointment();
     }
+
+    public void searchPatient(int id) {
+
+    boolean found = false;
+
+    for (int i = 0; i < patients.size(); i++) {
+
+        Patient p = patients.get(i);
+
+        if (p.getId() == id) {
+            p.displayDetails();
+            found = true;
+        }
+    }
+    
+
+    if (found == false) {
+        System.out.println("Patient Not Found");
+    }
+    }
+
+    public void deletePatient(int id) {
+
+    for (int i = 0; i < patients.size(); i++) {
+
+        if (patients.get(i).getId() == id) {
+
+            patients.remove(i);
+
+            System.out.println("Patient Deleted");
+
+            return;
+        }
+    }
+
 }
+}
+

@@ -6,7 +6,13 @@ public class Patient extends Person {
         super(id, name);
         this.disease = disease;
     }
+     
+    
+    public int getId(){
+           return id; 
+    }
 
+    
     @Override
     public void displayDetails() {
         System.out.println(

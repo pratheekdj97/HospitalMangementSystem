@@ -18,7 +18,9 @@ public class Main {
             System.out.println("4. View Patients");
             System.out.println("5. View Doctors");
             System.out.println("6. View Appointments");
-            System.out.println("7. Exit");
+            System.out.println("7. Search patient");
+            System.out.println("8. Remove patient");
+            System.out.println("9. Exit");
 
             System.out.print("Enter Choice: ");
             choice = sc.nextInt();
@@ -114,13 +116,33 @@ public class Main {
 
                 case 7:
 
-                    System.out.println("Thank You");
+                    
+
+                    System.out.print("Enter Patient ID: ");
+                    int searchId = sc.nextInt();
+                    h1.searchPatient(searchId);
                     break;
+
+                case 8:
+
+                    System.out.print("Enter Patient ID: ");
+                    int deleteId = sc.nextInt();
+
+                    h1.deletePatient(deleteId);
+
+                      break;
+
+                case 9:
+
+                    System.out.println("Thank You");
+                     return;
+                    
 
                 default:
 
                     System.out.println("Invalid Choice");
             }
+
 
         } while (choice != 7);
 
